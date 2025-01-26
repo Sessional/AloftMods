@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8289123257145325981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7e13dda513544419a89926bd12ad8a, type: 3}
+  m_Name: AssemblyDefinitions
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - C:\Program Files (x86)\Steam\steamapps\common\Aloft\BepInEx\plugins
+  definitions:
+  - {fileID: 5897886265953266890, guid: 9bc7784a400b01f429b82403793ea88f, type: 3}
+--- !u!114 &-2856705835112993906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d1008b78cb6e846889b7778282fbef, type: 3}
+  m_Name: AssetBundleDefinitions
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - C:\Program Files (x86)\Steam\steamapps\common\Aloft\Aloft_Data\StreamingAssets\amf
+  assetBundles:
+  - assetBundleName: beehive.assetbundle
+    assets:
+    - {fileID: 919132149155446097, guid: 3c86b99658dca2f47a8dbe6ceaf68439, type: 3}
+    - {fileID: 2800000, guid: 78b3ceb27f4172349a8b40469208e584, type: 3}
+    - {fileID: 2800000, guid: c3ac667487a92304b8db80014a1a39e9, type: 3}
+    - {fileID: 11400000, guid: cbbb522fca6341e469f18f6e33462584, type: 2}
+    - {fileID: 11400000, guid: a767751f4628a0d48a712262a80d3f56, type: 2}
+    - {fileID: 1223252406906318905, guid: dea892f7b38e45444a19e53ac1b62cbb, type: 3}
+    - {fileID: 2800000, guid: 6b6980d0aad4ccc4780185ee26dee03f, type: 3}
+    - {fileID: 2800000, guid: 09b1fac4a2bc2584cb5d6228c2e3e2bc, type: 3}
+    - {fileID: 4900000, guid: 9c0c8c362e4a27d489baf818ea0878a7, type: 3}
+    - {fileID: 11400000, guid: 6b60cc3a9586cbd46a8ff79bfa336f0a, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e563561e08b6a3642a487177f5cfbb37, type: 3}
+  m_Name: Manifest
+  m_EditorClassIdentifier: 
+  Data:
+  - {fileID: 8308542348391157115}
+  - {fileID: -2856705835112993906}
+  - {fileID: -8289123257145325981}
+  identity: {fileID: 8308542348391157115}
+  QuickAccess: 1
+--- !u!114 &8308542348391157115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22bb7fd1d3b56a48bc52f8e407901d6, type: 3}
+  m_Name: ManifestIdentity
+  m_EditorClassIdentifier: 
+  StagingPaths: []
+  Author: Sessional
+  Name: BeeBoxes
+  Description: A mod to add bee boxes for honey and wax.
+  Version: 1.0
+  Dependencies: []

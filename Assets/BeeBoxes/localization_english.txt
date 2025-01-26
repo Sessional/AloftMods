@@ -1,0 +1,2 @@
+BEEHIVE	Bee Hive
+BEEHIVE_DESCRIPTION Build a home for bees to produce wax and honey.

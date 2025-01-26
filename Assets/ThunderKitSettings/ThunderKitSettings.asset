@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9057f7f601990a4883b2cb295c4f43e, type: 3}
+  m_Name: ThunderKitSettings
+  m_EditorClassIdentifier: 
+  FirstLoad: 0
+  ShowOnStartup: 1
+  GameExecutable: Aloft.exe
+  GamePath: C:\Program Files (x86)\Steam\steamapps\common\Aloft
+  Is64Bit: 1
+  DateTimeFormat: HH:mm:ss:fff
+  CreatedDateFormat: MMM/dd HH:mm:ss
+  ShowLogWindow: 1
+  LogPackageSourceTimings: 0
+  GenerateAssetsProject: 0
+  FixLocalDiskPackages: 0
+  ImageCachePath: Library/MarkdownImageCache
+  CachedImageCount: 0
+  CacheSize: 0
+  MarkdownOpenMode: 1
+  SelectedPipeline: {fileID: 11400000, guid: 5ba27348fd5d7154fa14cf3ff9132a05, type: 2}
+  SelectedManifest: {fileID: 11400000, guid: 7b0ee9e8a62593e42bac2631af7484a6, type: 2}
+  QuickAccessPipelines:
+  - {fileID: 11400000, guid: 5ba27348fd5d7154fa14cf3ff9132a05, type: 2}
+  - {fileID: 11400000, guid: f6d202370b55e99428ea99e72bc2b859, type: 2}
+  - {fileID: 11400000, guid: ceccb56946a1cac4a8049b0c686483f7, type: 2}
+  QuickAccessManifests:
+  - {fileID: 11400000, guid: 7b0ee9e8a62593e42bac2631af7484a6, type: 2}
+  - {fileID: 11400000, guid: 6c9b27d34168d6948ac9655e2aa2a400, type: 2}
+  - {fileID: 11400000, guid: 81f197bee9b4b9b4fba5d8627881bf74, type: 2}
+  ImportConfiguration: {fileID: 11400000, guid: 740ef861beae20049b2378ecb17c953c, type: 2}
