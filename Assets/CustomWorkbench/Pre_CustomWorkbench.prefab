@@ -1,0 +1,360 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1399054913572886731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6976698333101695821}
+  - component: {fileID: 1555862066093728206}
+  - component: {fileID: 4863482974329230605}
+  - component: {fileID: 5901244476384442208}
+  - component: {fileID: 4434415928187257256}
+  - component: {fileID: 1073251664289567661}
+  - component: {fileID: 2145210023279217431}
+  m_Layer: 18
+  m_Name: Pre_CustomWorkbench
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6976698333101695821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399054913572886731}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6181347125381995495}
+  - {fileID: 2830197519251966327}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1555862066093728206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399054913572886731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1864383287, guid: 7c729ac68f36db13c9550375d40fce84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  HitMustBeDirect: 0
+  IsInvincibleWhenCorrupted: 0
+  IsInvincibleWhenUnhealthy: 0
+  AttacksPassThrough: 0
+  DestroyGameObject: 0
+  InvokeDeathEventBefore: 0
+  Tags: 
+  EffectiveDmgTags: 
+  RequiredTierTag: 1000
+  RequireTool: 101
+  DestroyVfx: 0
+  HurtVfx: 0
+  DamageEffects: []
+  AudioSource: {fileID: 0}
+  SoundID: 0
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5901244476384442208}
+        m_TargetAssemblyTypeName: Terrain.Platforms.Population.Construction.ConstructionAbstract,
+          Aloft
+        m_MethodName: GiveBackResources
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  IsInvincible: 1
+  RemovePopulationOnDeath: 1
+--- !u!114 &4863482974329230605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399054913572886731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1853004419, guid: 7c729ac68f36db13c9550375d40fce84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractRenderer:
+  - {fileID: 5009026059276476552}
+  UseSameMat: 0
+--- !u!114 &5901244476384442208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399054913572886731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b8f2ff537cce3a4ebce2e70f8beedda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioSourceObj: {fileID: 0}
+  AudioSource: {fileID: 0}
+  GridManager: {fileID: 0}
+  GhostRef: {fileID: 4434415928187257256}
+  craftingStation: 4
+--- !u!114 &4434415928187257256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399054913572886731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1723355495, guid: 7c729ac68f36db13c9550375d40fce84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseAnchors: 0
+  GroundOffset: 0
+  CanBeInsideCollider: 0
+  SnapRotationAngle: 45
+  AnchorParent: {fileID: 0}
+  PreviewCenterPoint: {fileID: 6976698333101695821}
+  PreviewAngle: 45
+  RemoveFromPreview: []
+  GridBehaviours: []
+  RemoveFromGhost: []
+  Anchors: []
+  EventConstructionUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1073251664289567661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399054913572886731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -712951708, guid: 7c729ac68f36db13c9550375d40fce84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StateSpecific: 1
+  OnlyInState: 2
+  OnlyInStates: 
+  RequireHoldingItems: 
+  PromptTitle: 
+  Prompt: Use
+  PromptHold: 
+  InteractibleDataOptional: {fileID: 0}
+  InteractibleWithMouse: 0
+  OnlySelectOnce: 0
+  MustHoldItem: 0
+  OnSelect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4863482974329230605}
+        m_TargetAssemblyTypeName: Interactions.Interactibles.InteractibleSelectMaterials,
+          Aloft
+        m_MethodName: Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDeselect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4863482974329230605}
+        m_TargetAssemblyTypeName: Interactions.Interactibles.InteractibleSelectMaterials,
+          Aloft
+        m_MethodName: Deselect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ExecuteOnDown: 1
+  InteractEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5901244476384442208}
+        m_TargetAssemblyTypeName: ConstructionCustomCraftingStation, CustomWorkbench
+        m_MethodName: Click_Interact
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!135 &2145210023279217431
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399054913572886731}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &8789983821381365958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2830197519251966327}
+  - component: {fileID: 3717274061328008443}
+  m_Layer: 21
+  m_Name: Collision - Terrain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2830197519251966327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8789983821381365958}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.381, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6976698333101695821}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &3717274061328008443
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8789983821381365958}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &5927360569882180620
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6976698333101695821}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 0a88c1800173ec24b963e35904f6e95b, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a88c1800173ec24b963e35904f6e95b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a88c1800173ec24b963e35904f6e95b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a88c1800173ec24b963e35904f6e95b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a88c1800173ec24b963e35904f6e95b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a88c1800173ec24b963e35904f6e95b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a88c1800173ec24b963e35904f6e95b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a88c1800173ec24b963e35904f6e95b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a88c1800173ec24b963e35904f6e95b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a88c1800173ec24b963e35904f6e95b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a88c1800173ec24b963e35904f6e95b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a88c1800173ec24b963e35904f6e95b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a88c1800173ec24b963e35904f6e95b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a88c1800173ec24b963e35904f6e95b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a88c1800173ec24b963e35904f6e95b, type: 3}
+      propertyPath: m_Name
+      value: Mortar
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a88c1800173ec24b963e35904f6e95b, type: 3}
+      propertyPath: m_Layer
+      value: 18
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a88c1800173ec24b963e35904f6e95b, type: 3}
+--- !u!23 &5009026059276476552 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 0a88c1800173ec24b963e35904f6e95b, type: 3}
+  m_PrefabInstance: {fileID: 5927360569882180620}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6181347125381995495 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0a88c1800173ec24b963e35904f6e95b, type: 3}
+  m_PrefabInstance: {fileID: 5927360569882180620}
+  m_PrefabAsset: {fileID: 0}

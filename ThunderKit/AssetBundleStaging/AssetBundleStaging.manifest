@@ -1,7 +1,7 @@
 ManifestFileVersion: 0
-CRC: 3231786459
+CRC: 35305760
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: beehive.assetbundle
+      Name: customworkbench.assetbundle
       Dependencies: {}

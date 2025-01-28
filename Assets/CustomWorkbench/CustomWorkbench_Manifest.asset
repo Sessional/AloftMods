@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8289123257145325981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7e13dda513544419a89926bd12ad8a, type: 3}
+  m_Name: AssemblyDefinitions
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - C:\Program Files (x86)\Steam\steamapps\common\Aloft\BepInEx\plugins
+  definitions:
+  - {fileID: 5897886265953266890, guid: e9ac4daf1789b0947b18ef45d76cce10, type: 3}
+--- !u!114 &-2856705835112993906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d1008b78cb6e846889b7778282fbef, type: 3}
+  m_Name: AssetBundleDefinitions
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - C:\Program Files (x86)\Steam\steamapps\common\Aloft\Aloft_Data\StreamingAssets\amf
+  assetBundles:
+  - assetBundleName: customworkbench.assetbundle
+    assets:
+    - {fileID: 919132149155446097, guid: 0a88c1800173ec24b963e35904f6e95b, type: 3}
+    - {fileID: 2100000, guid: 48a03796ec35e974fbd7f959bbaec9f8, type: 2}
+    - {fileID: 1399054913572886731, guid: 7c58d285e4167804391cc48943993dce, type: 3}
+    - {fileID: 2800000, guid: 87a940d52169e2b4ba58f23e8c07632c, type: 3}
+    - {fileID: 2800000, guid: ca40ce21a76349146aeba4490669dee8, type: 3}
+    - {fileID: 2800000, guid: ca7c3d9b3415da14a8958f9d630ed28c, type: 3}
+    - {fileID: 11400000, guid: 5f96de3255225fa43a6b38edb1f9878f, type: 2}
+    - {fileID: 11400000, guid: e649e8902071b1f4a9004ab5174115fc, type: 2}
+    - {fileID: 11400000, guid: a1ae7b1b85ba10048bd5f1a62fcf5e8e, type: 2}
+    - {fileID: 11400000, guid: 16ed4f765a6fb95409fd725cff2b195c, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e563561e08b6a3642a487177f5cfbb37, type: 3}
+  m_Name: CustomWorkbench_Manifest
+  m_EditorClassIdentifier: 
+  Data:
+  - {fileID: 8308542348391157115}
+  - {fileID: -2856705835112993906}
+  - {fileID: -8289123257145325981}
+  identity: {fileID: 8308542348391157115}
+  QuickAccess: 1
+--- !u!114 &8308542348391157115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22bb7fd1d3b56a48bc52f8e407901d6, type: 3}
+  m_Name: ManifestIdentity
+  m_EditorClassIdentifier: 
+  StagingPaths: []
+  Author: Sessional
+  Name: CustomWorkbenches
+  Description: A mod to demonstrate adding new custom workbenches
+  Version: 1.0
+  Dependencies: []
