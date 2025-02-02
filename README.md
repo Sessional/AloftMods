@@ -10,3 +10,6 @@ A grouping of random mods to demonstrate how to do things
 ## Mods in here and what they do:
 - **BeeBoxes**: A mod that adds a buildable beehive to produce wax and honey. Relies on the Aloft Mod Framework to work (content and code).
 - **NoPoop**: A mod that disables droppings of manure (caveat: possibly more things) from farm animals. Code-only plugin, does not rely on the Aloft Mod Framework.
+- **CustomBuildingTileset**: a content-only mod that adds new building tilesets, along with a new sub-tab inside the building screen to house them. Relies on the Aloft Mod Framework to work (content only).
+- **CustomWorkbench**: a code and content mod that adds a new workbench (a mortar) that hooks into the existing crafting system in the game and permits special recipes that aren't craftable on other stations. Relies on the Aloft Mod Framework to work (content and code only).
+- **PumpkinCrops**: an example of a content-only mod that adds new spawnable resources in the game and allows them to be harvested for resources. Relies on the Aloft Mod Framework to work (content only).

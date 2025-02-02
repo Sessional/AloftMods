@@ -1,7 +1,7 @@
 ManifestFileVersion: 0
-CRC: 35305760
+CRC: 3119657128
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: customworkbench.assetbundle
+      Name: pumpkincrops.assetbundle
       Dependencies: {}

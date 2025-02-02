@@ -42,22 +42,6 @@ MonoBehaviour:
     - {fileID: 2100000, guid: e2433135ba20ee842a209a8c703b6d9a, type: 2}
     - {fileID: 2800000, guid: ffcefc3a34acaa940b772e8a9d043ad0, type: 3}
     - {fileID: 2800000, guid: 0189786480a32fb4c865bd8bc685226f, type: 3}
---- !u!114 &-3350997705136560653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b7e13dda513544419a89926bd12ad8a, type: 3}
-  m_Name: AssemblyDefinitions
-  m_EditorClassIdentifier: 
-  StagingPaths:
-  - C:\Program Files (x86)\Steam\steamapps\common\Aloft\BepInEx\plugins
-  definitions:
-  - {fileID: 5897886265953266890, guid: be0a4282560feee478db6e1c5da7e309, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,7 +57,6 @@ MonoBehaviour:
   Data:
   - {fileID: 4808058778411836805}
   - {fileID: -7959336451610492842}
-  - {fileID: -3350997705136560653}
   identity: {fileID: 4808058778411836805}
   QuickAccess: 1
 --- !u!114 &4808058778411836805

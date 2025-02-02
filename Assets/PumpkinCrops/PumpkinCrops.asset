@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8377908519700410196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22bb7fd1d3b56a48bc52f8e407901d6, type: 3}
+  m_Name: ManifestIdentity
+  m_EditorClassIdentifier: 
+  StagingPaths: []
+  Author: Sessional
+  Name: Pumpkin Crops
+  Description: A mod to show how to add pumpkin crops to the spawning pool
+  Version: 1.0
+  Dependencies: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e563561e08b6a3642a487177f5cfbb37, type: 3}
+  m_Name: PumpkinCrops
+  m_EditorClassIdentifier: 
+  Data:
+  - {fileID: -8377908519700410196}
+  - {fileID: 3569068524984531271}
+  identity: {fileID: -8377908519700410196}
+  QuickAccess: 1
+--- !u!114 &3569068524984531271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d1008b78cb6e846889b7778282fbef, type: 3}
+  m_Name: AssetBundleDefinitions
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - C:\Program Files (x86)\Steam\steamapps\common\Aloft\Aloft_Data\StreamingAssets\amf
+  assetBundles:
+  - assetBundleName: pumpkincrops.assetbundle
+    assets:
+    - {fileID: 2800000, guid: d0fc40ebb5dc3dd4b99872c9c6f61399, type: 3}
+    - {fileID: 2800000, guid: a61245e11da1bd740b5830a764bfd570, type: 3}
+    - {fileID: 2100000, guid: 9c86b62fbc118614e96d79b1dd7072d7, type: 2}
+    - {fileID: 919132149155446097, guid: 62ff11005bfa04f40a4c777dbab96cd5, type: 3}
+    - {fileID: 3141270205780058058, guid: c2b03bbcbcb7ef644830200e0406ab86, type: 3}
+    - {fileID: 11400000, guid: 58cebf55fdedb2545b2aceb1cf7b1953, type: 2}
+    - {fileID: 11400000, guid: d0a3315a7a50fa144a8007df29916b49, type: 2}
+    - {fileID: 11400000, guid: 9993028170069e342902ab33f63e1628, type: 2}

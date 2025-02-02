@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 399818310, guid: 1bf9873177a278642b0759b11d6971dd, type: 3}
+  m_Name: Pumpkin
+  m_EditorClassIdentifier: 
+  PopulationId: 400008
+  InstancePrefab: {fileID: 3141270205780058058, guid: c2b03bbcbcb7ef644830200e0406ab86, type: 3}
+  BehaviourType: 0
+  MultiStepBehaviour: 0
+  LoadDistance: 2
+  PopDataTags: 07000000
+  CanLearnViaSketchbook: 0
