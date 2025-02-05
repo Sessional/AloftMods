@@ -73,3 +73,19 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Thunderkit generated files
+/ThunderKit/*
+!ThunderKit/AssetBundleStaging/AssetBundleStaging*
+/Assets/ThunderKitSettings/Logs*
+
+
+/Packages
+
+*.DotSettings
+
+Assets/*.dll
+Assets/*.dll.meta
+
+/Assets/Scenes
+/Assets/Scenes.meta

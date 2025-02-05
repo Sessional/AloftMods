@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e563561e08b6a3642a487177f5cfbb37, type: 3}
+  m_Name: CustomFood
+  m_EditorClassIdentifier: 
+  Data:
+  - {fileID: 6553937586400224610}
+  - {fileID: 5587511736743865736}
+  identity: {fileID: 6553937586400224610}
+  QuickAccess: 1
+--- !u!114 &5587511736743865736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d1008b78cb6e846889b7778282fbef, type: 3}
+  m_Name: AssetBundleDefinitions
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - C:\Program Files (x86)\Steam\steamapps\common\Aloft\Aloft_Data\StreamingAssets\amf
+  assetBundles:
+  - assetBundleName: customfood.assetbundle
+    assets:
+    - {fileID: 11400000, guid: 31fc79f8d59b88849ba21c7122001d92, type: 2}
+    - {fileID: 2800000, guid: 3e335f47e15ff6e4086d610243822ad9, type: 3}
+    - {fileID: 11400000, guid: efbf6291cf98d4442819fadb4c9d9c0d, type: 2}
+    - {fileID: 11400000, guid: 89566a8309f80bc47b844392d0ee7137, type: 2}
+    - {fileID: 11400000, guid: 1d8788ba997f2ad4bb78790056d8402d, type: 2}
+--- !u!114 &6553937586400224610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22bb7fd1d3b56a48bc52f8e407901d6, type: 3}
+  m_Name: ManifestIdentity
+  m_EditorClassIdentifier: 
+  StagingPaths: []
+  Author: Sessional
+  Name: Custom Food
+  Description: An example of adding a new cooking recipe
+  Version: 1.0
+  Dependencies:
+  - {fileID: 11400000, guid: a17693224880ecc43b03781c5e65e4c7, type: 2}
+  - {fileID: 11400000, guid: 0f20a6a408a329540927165479c16c40, type: 2}

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 399818310, guid: 1bf9873177a278642b0759b11d6971dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 60246b6bff698ea46a0de76989cd64ea, type: 3}
   m_Name: CustomBuildingTilesetFoundation
   m_EditorClassIdentifier: 
   PopulationId: 400005

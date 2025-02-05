@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 175216690, guid: 1bf9873177a278642b0759b11d6971dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 65910d4fa6a483a4798fcdb3fbff9922, type: 3}
   m_Name: CustomWorkbenchCraftingRecipe
   m_EditorClassIdentifier: 
   InputItems: 03000000
@@ -18,4 +18,4 @@ MonoBehaviour:
   OutputModItem: {fileID: 0}
   Quantity: 1
   AttachToExistingStation: 0
-  Station: {fileID: 0}
+  Station: 0

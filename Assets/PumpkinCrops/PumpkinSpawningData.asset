@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 353913240, guid: 1bf9873177a278642b0759b11d6971dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 82bc4f44a5f184c458954b7cf06f6b1d, type: 3}
   m_Name: PumpkinSpawningData
   m_EditorClassIdentifier: 
   Name: Pumpkin
