@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -1731506211, guid: 1bf9873177a278642b0759b11d6971dd, type: 3}
+  m_Script: {fileID: 11500000, guid: f5749aa3ef9c6844bbb07fdea10423d5, type: 3}
   m_Name: CustomWorkbenchRecipeGroup
   m_EditorClassIdentifier: 
   StationId: 4

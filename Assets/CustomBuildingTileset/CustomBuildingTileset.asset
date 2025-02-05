@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4992816106032157222
+--- !u!114 &-7959336451610492842
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,32 +9,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5b20fac9c71fd64183cb7a8f359d73a, type: 3}
-  m_Name: StageAssemblies
+  m_Script: {fileID: 11500000, guid: 17d1008b78cb6e846889b7778282fbef, type: 3}
+  m_Name: AssetBundleDefinitions
   m_EditorClassIdentifier: 
-  Active: 1
-  stageDebugDatabases: 0
-  releaseBuild: 1
-  assemblyArtifactPath: <AssemblyStaging>
-  buildTarget: 5
---- !u!114 &-4337741710643385011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 924ee63e6c016f14d8a1560b288f15a3, type: 3}
-  m_Name: StageAssetBundles
-  m_EditorClassIdentifier: 
-  Active: 1
-  AssetBundleBuildOptions: 1
-  buildTarget: 5
-  recurseDirectories: 0
-  simulate: 0
-  BundleArtifactPath: <AssetBundleStaging>
+  StagingPaths:
+  - C:\Program Files (x86)\Steam\steamapps\common\Aloft\Aloft_Data\StreamingAssets\amf
+  assetBundles:
+  - assetBundleName: custombuildingtileset.assetbundle
+    assets:
+    - {fileID: 11400000, guid: 35873180fb356b3479ca9d1b1f491ae6, type: 2}
+    - {fileID: 11400000, guid: b11698cb135248144933db548a2cb091, type: 2}
+    - {fileID: 4300000, guid: 07c79bedf2ecf7f4dbe65fe15c96a9a2, type: 2}
+    - {fileID: 8390336767086408473, guid: 7c8b13b9642d1994990dd53c3199c7bc, type: 3}
+    - {fileID: 2800000, guid: a032be16f7fb72a40b9b651557fc3bc6, type: 3}
+    - {fileID: 2100000, guid: b22e09a386ef2a04fb155764b802533b, type: 2}
+    - {fileID: 2800000, guid: cbbb153a2d8b37346bf9febce2c4de95, type: 3}
+    - {fileID: 2800000, guid: a9b09d26b70f74147ad0f1ac1bd93dce, type: 3}
+    - {fileID: 2800000, guid: 8309a573a57679d4ebaca4b934221040, type: 3}
+    - {fileID: 11400000, guid: 947fb032ac239bf4989a5e7223c69c27, type: 2}
+    - {fileID: 11400000, guid: c3e4be7ddd8fed045bfe316026bed36b, type: 2}
+    - {fileID: 4300000, guid: bcd69b3e2dce03445832371d6f79ecf1, type: 2}
+    - {fileID: 5454805072876194900, guid: b278c9b8d57d5b0428e50e9675fd830a, type: 3}
+    - {fileID: 2100000, guid: 5137b4682bf759848abeaaf7b27b338f, type: 2}
+    - {fileID: 2800000, guid: 82b46a70486ad504faaa81fb0fee6c87, type: 3}
+    - {fileID: 2800000, guid: c3898d7eb78ef45419fbe44b989a6e5d, type: 3}
+    - {fileID: 2800000, guid: a9b09d26b70f74147ad0f1ac1bd93dce, type: 3}
+    - {fileID: 11400000, guid: 0d0ad0e62ed6a114d9e431850513e502, type: 2}
+    - {fileID: 11400000, guid: 58e1c835f4d85d444bb7c92c424310c2, type: 2}
+    - {fileID: 919132149155446097, guid: bef37a61f88375e42aa32bcdfa7a091a, type: 3}
+    - {fileID: 9006002054049964156, guid: 8365574481743ae48a2af7cd9a86031b, type: 3}
+    - {fileID: 2800000, guid: 622907650c50a714db1ceea1bdc5a2cb, type: 3}
+    - {fileID: 2100000, guid: e2433135ba20ee842a209a8c703b6d9a, type: 2}
+    - {fileID: 2800000, guid: ffcefc3a34acaa940b772e8a9d043ad0, type: 3}
+    - {fileID: 2800000, guid: 0189786480a32fb4c865bd8bc685226f, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,11 +51,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3695521163bdd74fa2845bbd3438240, type: 3}
+  m_Script: {fileID: 11500000, guid: e563561e08b6a3642a487177f5cfbb37, type: 3}
   m_Name: CustomBuildingTileset
   m_EditorClassIdentifier: 
   Data:
-  - {fileID: -4992816106032157222}
-  - {fileID: -4337741710643385011}
+  - {fileID: 4808058778411836805}
+  - {fileID: -7959336451610492842}
+  identity: {fileID: 4808058778411836805}
   QuickAccess: 1
-  manifest: {fileID: 11400000, guid: 324a9385d16296444a18ba40d89110a8, type: 2}
+--- !u!114 &4808058778411836805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22bb7fd1d3b56a48bc52f8e407901d6, type: 3}
+  m_Name: ManifestIdentity
+  m_EditorClassIdentifier: 
+  StagingPaths: []
+  Author: Sessional
+  Name: Custom Building Tileset
+  Description: An example of creating a custom tileset
+  Version: 1.0
+  Dependencies:
+  - {fileID: 11400000, guid: a17693224880ecc43b03781c5e65e4c7, type: 2}
+  - {fileID: 11400000, guid: 0f20a6a408a329540927165479c16c40, type: 2}

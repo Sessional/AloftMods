@@ -1,0 +1,16 @@
+{
+    "name": "AloftModLoader",
+    "rootNamespace": "",
+    "references": [
+        "GUID:bc7a011497b7d4b45804dacfcce461ef"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
