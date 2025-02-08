@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e563561e08b6a3642a487177f5cfbb37, type: 3}
+  m_Name: PressMachine
+  m_EditorClassIdentifier: 
+  Data:
+  - {fileID: 2778783100289774292}
+  - {fileID: 4409700534250858077}
+  identity: {fileID: 2778783100289774292}
+  QuickAccess: 1
+--- !u!114 &2778783100289774292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22bb7fd1d3b56a48bc52f8e407901d6, type: 3}
+  m_Name: ManifestIdentity
+  m_EditorClassIdentifier: 
+  StagingPaths: []
+  Author: Sessional
+  Name: PressMachine
+  Description: A press for making paper
+  Version: 1.0
+  Dependencies:
+  - {fileID: 11400000, guid: a17693224880ecc43b03781c5e65e4c7, type: 2}
+  - {fileID: 11400000, guid: 0f20a6a408a329540927165479c16c40, type: 2}
+--- !u!114 &4409700534250858077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d1008b78cb6e846889b7778282fbef, type: 3}
+  m_Name: AssetBundleDefinitions
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - C:\Program Files (x86)\Steam\steamapps\common\Aloft\Aloft_Data\StreamingAssets\amf
+  assetBundles:
+  - assetBundleName: pressmachine.assetbundle
+    assets:
+    - {fileID: 2800000, guid: b382e2a5f50c69e43a71771bb1741726, type: 3}
+    - {fileID: 2100000, guid: 231b9fc4054475b41bc98c57cce0303b, type: 2}
+    - {fileID: 8441826988064429270, guid: 0b051dc5c1271d948b55edd0ce2b6f3e, type: 3}
+    - {fileID: 11400000, guid: 42bf434fc9527e84884f01ca58abe1a1, type: 2}
+    - {fileID: 11400000, guid: 8baae0ef97038034b898dd342d3736d4, type: 2}
+    - {fileID: 2800000, guid: fefa270ba7936bc4a88ebf722d1f96e6, type: 3}
+    - {fileID: 2800000, guid: 841cff9ba744b004b8b49e25add7d37d, type: 3}
+    - {fileID: 4300000, guid: 7345a820ad120f442a0b0745db7ff27b, type: 2}
+    - {fileID: 4300000, guid: 06b18639470b708439ce08ca8505c001, type: 2}
+    - {fileID: 4300000, guid: feeb6b4139d5e564b8977837c2d9be43, type: 2}

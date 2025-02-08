@@ -17,6 +17,7 @@ using Scriptable_Objects.Consumable;
 using Scriptable_Objects.Cooking;
 using Terrain.Platforms.Population;
 using Terrain.Platforms.Population.BalanceSpawner;
+using Terrain.Platforms.Population.Construction.Machinery;
 using Terrain.Platforms.Types;
 using UI;
 using UI.Building;
@@ -300,7 +301,6 @@ namespace AloftModLoader {
                        Console.WriteLine("Pop location is " + pop.LocalPosition);
                        __result = true;
                        return false;
-                       break;
                    case "learn":
                        switch (parts[1])
                        {
