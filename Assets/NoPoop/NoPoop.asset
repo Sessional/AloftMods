@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StagingPaths:
   - C:\Program Files (x86)\Steam\steamapps\common\Aloft\BepInEx\plugins
+  - <ManifestStagingRoot>/plugins
   definitions:
   - {fileID: 5897886265953266890, guid: d2522b6fe3bfb514cbf0a1343bb976a2, type: 3}
 --- !u!114 &-2856705835112993906
@@ -30,6 +31,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StagingPaths:
   - C:\Program Files (x86)\Steam\steamapps\common\Aloft\Aloft_Data\StreamingAssets\amf
+  - <ManifestStagingRoot>
   assetBundles:
   - assetBundleName: nopoop.assetbundle
     assets: []
@@ -49,8 +51,43 @@ MonoBehaviour:
   - {fileID: 8308542348391157115}
   - {fileID: -2856705835112993906}
   - {fileID: -8289123257145325981}
+  - {fileID: 4524858931016367744}
+  - {fileID: 2653871113639408781}
   identity: {fileID: 8308542348391157115}
   QuickAccess: 1
+--- !u!114 &2653871113639408781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b243ff405b33b94dbf5b6775dd9aa33, type: 3}
+  m_Name: Files
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>
+  includeMetaFiles: 0
+  files:
+  - {fileID: 2800000, guid: 9c1fea77ece21944b97a04831b2b3595, type: 3}
+  - {fileID: 4900000, guid: 54a14f8c79104584f97cc26b2e96d21c, type: 3}
+--- !u!114 &4524858931016367744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a82fec78ebc734d9ad1346cd40b5f9, type: 3}
+  m_Name: ThunderstoreData
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>
+  url: https://github.com/Sessional/AloftMods
 --- !u!114 &8308542348391157115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StagingPaths: []
   Author: Sessional
-  Name: CustomWorkbenches
-  Description: A mod to demonstrate adding new custom workbenches
-  Version: 1.0
+  Name: NoPoop
+  Description: A mod that stops animals from creating manure.
+  Version: 1.0.0
   Dependencies: []
