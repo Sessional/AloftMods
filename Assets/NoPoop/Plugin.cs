@@ -16,7 +16,7 @@ public static class PoopPatch
     }
 }
 
-[BepInPlugin("nopoop.sessional.dev", "NoPoop", "1.0")]
+[BepInPlugin("nopoop.sessional.dev", "NoPoop", "1.0.0")]
 public class NoPoopPlugin : BaseUnityPlugin
 {
     void Awake()
