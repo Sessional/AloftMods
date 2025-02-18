@@ -1,0 +1,17 @@
+{
+    "name": "NewWorkbench",
+    "rootNamespace": "NewWorkbench",
+    "references": [
+        "GUID:15fd0eace3b66f347a84de08b67cc0d9",
+        "GUID:53f742e58cd0a894db3c61d676b75608"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

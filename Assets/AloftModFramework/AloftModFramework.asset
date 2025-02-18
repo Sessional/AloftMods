@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5302332438182957165
+--- !u!114 &-7493092839609442647
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,13 +9,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b7e13dda513544419a89926bd12ad8a, type: 3}
-  m_Name: AssemblyDefinitions
+  m_Script: {fileID: 11500000, guid: f22bb7fd1d3b56a48bc52f8e407901d6, type: 3}
+  m_Name: ManifestIdentity
   m_EditorClassIdentifier: 
   StagingPaths:
-  - C:\Program Files (x86)\Steam\steamapps\common\Aloft\BepInEx\plugins
-  definitions:
-  - {fileID: 5897886265953266890, guid: bc7a011497b7d4b45804dacfcce461ef, type: 3}
+  - <ManifestStagingRoot>
+  Author: AloftModFramework
+  Name: Aloft_Mod_Framework
+  Description: A library for creating mods that integrate into Aloft seamlessly without
+    writing repetitive loading code
+  Version: 0.2.0
+  Dependencies:
+  - {fileID: 11400000, guid: 9a971d4b565a4934b881d1aefa0177b4, type: 2}
+--- !u!114 &-4487639348652281677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b243ff405b33b94dbf5b6775dd9aa33, type: 3}
+  m_Name: Files
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>
+  includeMetaFiles: 0
+  files:
+  - {fileID: 4900000, guid: 4948599267db0a94387db44e97002e71, type: 3}
+  - {fileID: 2800000, guid: 892af963f58b5024aa44f209a7e470f2, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29,11 +52,14 @@ MonoBehaviour:
   m_Name: AloftModFramework
   m_EditorClassIdentifier: 
   Data:
-  - {fileID: 6623792104492481957}
-  - {fileID: -5302332438182957165}
-  identity: {fileID: 6623792104492481957}
+  - {fileID: -7493092839609442647}
+  - {fileID: 9116203726557091717}
+  - {fileID: 5642057491372185140}
+  - {fileID: 7471749034934986709}
+  - {fileID: -4487639348652281677}
+  identity: {fileID: -7493092839609442647}
   QuickAccess: 1
---- !u!114 &6623792104492481957
+--- !u!114 &5642057491372185140
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,13 +68,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f22bb7fd1d3b56a48bc52f8e407901d6, type: 3}
-  m_Name: ManifestIdentity
+  m_Script: {fileID: 11500000, guid: 17d1008b78cb6e846889b7778282fbef, type: 3}
+  m_Name: AssetBundleDefinitions
   m_EditorClassIdentifier: 
-  StagingPaths: []
-  Author: Sessional
-  Name: Aloft Mod Framework
-  Description: An abstraction layer to facilitate creating asset bundles for Aloft
-    that can be loaded utilizing the Aloft Mod Loader.
-  Version: 1.0
-  Dependencies: []
+  StagingPaths:
+  - <ManifestStagingRoot>/plugins
+  - <GamePath>/BepInEx/plugins
+  assetBundles: []
+--- !u!114 &7471749034934986709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a82fec78ebc734d9ad1346cd40b5f9, type: 3}
+  m_Name: ThunderstoreData
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>
+  url: http://github.com/sessional/aloftmods
+--- !u!114 &9116203726557091717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7e13dda513544419a89926bd12ad8a, type: 3}
+  m_Name: AssemblyDefinitions
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>/plugins
+  - <GamePath>/BepInEx/plugins
+  definitions:
+  - {fileID: 5897886265953266890, guid: 15fd0eace3b66f347a84de08b67cc0d9, type: 3}
+  - {fileID: 5897886265953266890, guid: 53f742e58cd0a894db3c61d676b75608, type: 3}

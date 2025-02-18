@@ -1,0 +1,10 @@
+{
+    "name": "FixPluginTypesSerialization",
+    "author": "AloftModFramework",
+    "version_number": "1.0.4",
+    "website_url": "https://github.com/Sessional/AloftMods",
+    "description": "Fix custom Serializable structs and such not properly getting deserialized by Unity.",
+    "dependencies": [
+        "BepInEx-BepInExPack_Aloft-5.4.21"
+    ]
+}

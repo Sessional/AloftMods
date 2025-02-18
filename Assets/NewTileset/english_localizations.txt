@@ -1,0 +1,6 @@
+STONE_FLOOR	Stone Floor
+STONE_FLOOR_DESCRIPTION	A fancy floor made of stone blocks
+STUCCO_WALL	Stucco Wall
+STUCCO_WALL_DESCRIPTION	A fancy wall made of stucco
+WOOD_SHINGLES	Wood Shingles
+WOOD_SHINGLES_DESCRIPTION	A fancy roof of wooden shingles

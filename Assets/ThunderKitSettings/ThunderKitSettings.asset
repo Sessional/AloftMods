@@ -27,18 +27,18 @@ MonoBehaviour:
   CachedImageCount: 0
   CacheSize: 0
   MarkdownOpenMode: 1
-  SelectedPipeline: {fileID: 11400000, guid: 51c95765b2b7e894dbbf82dc4bd480af, type: 2}
-  SelectedManifest: {fileID: 11400000, guid: b475ebbbb7ddc674c9f6fd8113f19199, type: 2}
+  SelectedPipeline: {fileID: 11400000, guid: c1c7f282787c63543af44045a63393b9, type: 2}
+  SelectedManifest: {fileID: 11400000, guid: a1bd1f792ee4f4044a5f275e357fc098, type: 2}
   QuickAccessPipelines:
-  - {fileID: 11400000, guid: 51c95765b2b7e894dbbf82dc4bd480af, type: 2}
+  - {fileID: 11400000, guid: c1c7f282787c63543af44045a63393b9, type: 2}
   QuickAccessManifests:
-  - {fileID: 11400000, guid: a17693224880ecc43b03781c5e65e4c7, type: 2}
-  - {fileID: 11400000, guid: 0f20a6a408a329540927165479c16c40, type: 2}
-  - {fileID: 11400000, guid: 7b0ee9e8a62593e42bac2631af7484a6, type: 2}
-  - {fileID: 11400000, guid: 324a9385d16296444a18ba40d89110a8, type: 2}
-  - {fileID: 11400000, guid: b475ebbbb7ddc674c9f6fd8113f19199, type: 2}
-  - {fileID: 11400000, guid: 6c9b27d34168d6948ac9655e2aa2a400, type: 2}
-  - {fileID: 11400000, guid: 81f197bee9b4b9b4fba5d8627881bf74, type: 2}
-  - {fileID: 11400000, guid: 056363e516b9c0f40b8b533e9e283dd3, type: 2}
-  - {fileID: 11400000, guid: 7cce5a5b45a880845bd4f8f9cf8eb9b8, type: 2}
-  ImportConfiguration: {fileID: 11400000, guid: 740ef861beae20049b2378ecb17c953c, type: 2}
+  - {fileID: 11400000, guid: 7f9028a9fe46b384fa19ef767c30c076, type: 2}
+  - {fileID: 11400000, guid: c829f821ded204849b4769cb2747945d, type: 2}
+  - {fileID: 11400000, guid: 22ce7095cf6a8ba49954440775f3c7c6, type: 2}
+  - {fileID: 11400000, guid: 9a971d4b565a4934b881d1aefa0177b4, type: 2}
+  - {fileID: 11400000, guid: eacac0abbdc6b9b4f8abbc2dedf47bcd, type: 2}
+  - {fileID: 11400000, guid: a1bd1f792ee4f4044a5f275e357fc098, type: 2}
+  - {fileID: 11400000, guid: b66234a59745fc84b95ccfe3d31669c1, type: 2}
+  - {fileID: 11400000, guid: 6e2c90e12eab96a41b4d780e6da21880, type: 2}
+  - {fileID: 11400000, guid: 537d862fbdf820e4e8b52b43413db258, type: 2}
+  ImportConfiguration: {fileID: 11400000, guid: d4bd88d4980f66043ade2c34e157bbee, type: 2}

@@ -1,0 +1,4 @@
+LOBSTER	Lobster
+LOBSTER_DESCRIPTION	A vibrant red sea creature
+LOBSTER_PLATTER	Lobster Platter
+LOBSTER_PLATTER_DESCRIPTION	A delicious looking meal

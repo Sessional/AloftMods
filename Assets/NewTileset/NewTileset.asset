@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7493092839609442647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22bb7fd1d3b56a48bc52f8e407901d6, type: 3}
+  m_Name: ManifestIdentity
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>
+  Author: AloftModFramework
+  Name: NewTileset
+  Description: An example of adding a new tileset for building
+  Version: 1.0
+  Dependencies:
+  - {fileID: 11400000, guid: c829f821ded204849b4769cb2747945d, type: 2}
+  - {fileID: 11400000, guid: 33764bc86a3d6e849a435f521f62a260, type: 2}
+--- !u!114 &-4487639348652281677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b243ff405b33b94dbf5b6775dd9aa33, type: 3}
+  m_Name: Files
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>
+  includeMetaFiles: 0
+  files:
+  - {fileID: 4900000, guid: fb18a74f42b40b843b046ef0496e6475, type: 3}
+  - {fileID: 2800000, guid: 061bfe64a9554774098f8d4e1e832a07, type: 3}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e563561e08b6a3642a487177f5cfbb37, type: 3}
+  m_Name: NewTileset
+  m_EditorClassIdentifier: 
+  Data:
+  - {fileID: -7493092839609442647}
+  - {fileID: 9116203726557091717}
+  - {fileID: 5642057491372185140}
+  - {fileID: 7471749034934986709}
+  - {fileID: -4487639348652281677}
+  identity: {fileID: -7493092839609442647}
+  QuickAccess: 1
+--- !u!114 &5642057491372185140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d1008b78cb6e846889b7778282fbef, type: 3}
+  m_Name: AssetBundleDefinitions
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>/plugins
+  - <GamePath>/BepInEx/plugins
+  assetBundles:
+  - assetBundleName: newtileset.amf.assetbundle
+    assets:
+    - {fileID: 11400000, guid: e8b463e9dcfd9a144a67dc06e22bea8f, type: 2}
+    - {fileID: 11400000, guid: e58f575190ad7814ca57f28efa6f6d5b, type: 2}
+    - {fileID: 4900000, guid: 1f51c27bf7bdd8143ba0958b98acd6bb, type: 3}
+    - {fileID: 919132149155446097, guid: 7f644a50a285210438f322a5355e8321, type: 3}
+    - {fileID: 11400000, guid: f9b80c7cb829c424bbd1070f54c92e21, type: 2}
+    - {fileID: 2100000, guid: 2238cc2a879cb3446a126233da2b8923, type: 2}
+    - {fileID: 11400000, guid: c7e861102b74b1e4d8f28bb28e44cb03, type: 2}
+    - {fileID: 4579896398768123885, guid: d74e0ff0a945f964a86c03b3855e4653, type: 3}
+    - {fileID: 2800000, guid: f4b18ebb9abca0f40912151a46f0c429, type: 3}
+    - {fileID: 2800000, guid: 5ceacb85ab304fc4ca1a8c6568f340b6, type: 3}
+    - {fileID: 2800000, guid: a0b4440db61bad34ca73541ba9938b30, type: 3}
+    - {fileID: 2800000, guid: 64257951d30f02749b019b2701b2a664, type: 3}
+    - {fileID: 11400000, guid: 1119f7c4b359ab64b9d2859e7b13f143, type: 2}
+    - {fileID: 919132149155446097, guid: 5272b37022b2ae84f9a7716ab99d970f, type: 3}
+    - {fileID: 2100000, guid: 29062c5e06170ee4abaaef9183190ec3, type: 2}
+    - {fileID: 11400000, guid: 7fc44a36e19920d4780a75916f4ab7fc, type: 2}
+    - {fileID: 7210482079541495222, guid: e7c93ddf0fe2f5c419e365d5f2b26c96, type: 3}
+    - {fileID: 2800000, guid: b5e760163e61ed4488310021f456d9e8, type: 3}
+    - {fileID: 2800000, guid: 23bcd676cbe89054c92e87852b162632, type: 3}
+    - {fileID: 2800000, guid: 350fc27911fc3f14993b77eca593271c, type: 3}
+    - {fileID: 2800000, guid: 4fa4d7e5ccd2f6340b4a37a4c5026ebe, type: 3}
+    - {fileID: 2800000, guid: bc2d2f93214d88340978c895e8c741ef, type: 3}
+    - {fileID: 7210482079541495222, guid: c17ad4331f435964bbf0d4de7b20d387, type: 3}
+    - {fileID: 2100000, guid: 30b6ac908ac5340479c2d51d4075dfb7, type: 2}
+    - {fileID: 4300000, guid: bb4deee3b156d3642ac8d56c042e08c4, type: 2}
+    - {fileID: 11400000, guid: a647f5a6e573352418e6ab88bb0df260, type: 2}
+    - {fileID: 11400000, guid: ee299318d711476499a8a444e6879b1b, type: 2}
+--- !u!114 &7471749034934986709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a82fec78ebc734d9ad1346cd40b5f9, type: 3}
+  m_Name: ThunderstoreData
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>
+  url: http://github.com/sessional/aloftmods
+--- !u!114 &9116203726557091717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7e13dda513544419a89926bd12ad8a, type: 3}
+  m_Name: AssemblyDefinitions
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>/plugins
+  - <GamePath>/BepInEx/plugins
+  definitions: []

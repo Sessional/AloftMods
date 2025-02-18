@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7493092839609442647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22bb7fd1d3b56a48bc52f8e407901d6, type: 3}
+  m_Name: ManifestIdentity
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>
+  Author: AloftModFramework
+  Name: NewSpawnableResource
+  Description: Some new rocks!
+  Version: 1.0
+  Dependencies:
+  - {fileID: 11400000, guid: c829f821ded204849b4769cb2747945d, type: 2}
+--- !u!114 &-4487639348652281677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b243ff405b33b94dbf5b6775dd9aa33, type: 3}
+  m_Name: Files
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>
+  includeMetaFiles: 0
+  files:
+  - {fileID: 2800000, guid: ca6917cfb795178408ab80d48b8eef8c, type: 3}
+  - {fileID: 4900000, guid: 00251043a324213429059b5b4479bfdb, type: 3}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e563561e08b6a3642a487177f5cfbb37, type: 3}
+  m_Name: NewSpawnableResource
+  m_EditorClassIdentifier: 
+  Data:
+  - {fileID: -7493092839609442647}
+  - {fileID: 9116203726557091717}
+  - {fileID: 5642057491372185140}
+  - {fileID: 7471749034934986709}
+  - {fileID: -4487639348652281677}
+  identity: {fileID: -7493092839609442647}
+  QuickAccess: 1
+--- !u!114 &5642057491372185140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d1008b78cb6e846889b7778282fbef, type: 3}
+  m_Name: AssetBundleDefinitions
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>/plugins
+  - <GamePath>/BepInEx/plugins
+  assetBundles:
+  - assetBundleName: newspawnableresource.amf.assetbundle
+    assets:
+    - {fileID: 2800000, guid: 155479c23914ea3489ae7d67c28e1841, type: 3}
+    - {fileID: 2800000, guid: f048d7c19cb011348afcb696d0e33ead, type: 3}
+    - {fileID: 2800000, guid: 81afa793d532aa846ab1c5a1375158cd, type: 3}
+    - {fileID: 2800000, guid: e11aa72c3fe329842a14e2dafbd53393, type: 3}
+    - {fileID: 2100000, guid: f167bcb67d63c994dbfafb3ab9753ed0, type: 2}
+    - {fileID: 919132149155446097, guid: 41c95e5ef1d809c41960aa76f3305c67, type: 3}
+    - {fileID: 5717313326278260330, guid: 3253dc460b11a0840a6f26bdba07a1b6, type: 3}
+    - {fileID: 11400000, guid: 7814cdacde704b343901a0dfb4f1b698, type: 2}
+    - {fileID: 11400000, guid: bd0dda67cc1e3fd4b99110466665ccd1, type: 2}
+    - {fileID: 11400000, guid: 61cda04af8e98254ca2ba5e4e9c9a76e, type: 2}
+    - {fileID: 11400000, guid: 0399cf77460abea429c2add135f06836, type: 2}
+    - {fileID: 11400000, guid: 0bcdbb747a72b154089245cbee5e7ab6, type: 2}
+--- !u!114 &7471749034934986709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a82fec78ebc734d9ad1346cd40b5f9, type: 3}
+  m_Name: ThunderstoreData
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>
+  url: http://github.com/sessional/aloftmods
+--- !u!114 &9116203726557091717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7e13dda513544419a89926bd12ad8a, type: 3}
+  m_Name: AssemblyDefinitions
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>/plugins
+  - <GamePath>/BepInEx/plugins
+  definitions: []
