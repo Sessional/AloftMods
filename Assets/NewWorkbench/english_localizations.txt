@@ -1,0 +1,2 @@
+NEW_WORKBENCH	New Workbench
+NEW_WORKBENCH_DESCRIPTION	New Workbench Description

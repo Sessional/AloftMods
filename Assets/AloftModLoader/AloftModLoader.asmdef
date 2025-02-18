@@ -1,8 +1,8 @@
 {
     "name": "AloftModLoader",
-    "rootNamespace": "",
+    "rootNamespace": "AloftModLoader",
     "references": [
-        "GUID:bc7a011497b7d4b45804dacfcce461ef"
+        "GUID:15fd0eace3b66f347a84de08b67cc0d9"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

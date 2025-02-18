@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de7d64f996120ce44ab15da50dd2e0f6, type: 3}
+  m_Name: ConstructionCategory_StoneBlocks
+  m_EditorClassIdentifier: 
+  id: 21
+  categoryName: Stone Block
+  displayIcon: {fileID: 21300000, guid: 64257951d30f02749b019b2701b2a664, type: 3}
+  secondaryIcon: {fileID: 21300000, guid: 64257951d30f02749b019b2701b2a664, type: 3}
+  useParentCategory: 1
+  parentCategory:
+    category: {fileID: 0}
+    vanillaCategory: 0
+    id: -1

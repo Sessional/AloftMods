@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8289123257145325981
+--- !u!114 &-7493092839609442647
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,14 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b7e13dda513544419a89926bd12ad8a, type: 3}
-  m_Name: AssemblyDefinitions
+  m_Script: {fileID: 11500000, guid: f22bb7fd1d3b56a48bc52f8e407901d6, type: 3}
+  m_Name: ManifestIdentity
   m_EditorClassIdentifier: 
   StagingPaths:
-  - C:\Program Files (x86)\Steam\steamapps\common\Aloft\BepInEx\plugins
-  definitions:
-  - {fileID: 5897886265953266890, guid: 9bc7784a400b01f429b82403793ea88f, type: 3}
---- !u!114 &-2856705835112993906
+  - <ManifestStagingRoot>
+  Author: AloftModFramework
+  Name: BeeBoxes
+  Description: A beehive to facilitate getting wax and honey sustainably.
+  Version: 0.1.3
+  Dependencies:
+  - {fileID: 11400000, guid: c829f821ded204849b4769cb2747945d, type: 2}
+--- !u!114 &-4487639348652281677
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -25,24 +29,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17d1008b78cb6e846889b7778282fbef, type: 3}
-  m_Name: AssetBundleDefinitions
+  m_Script: {fileID: 11500000, guid: 4b243ff405b33b94dbf5b6775dd9aa33, type: 3}
+  m_Name: Files
   m_EditorClassIdentifier: 
   StagingPaths:
-  - C:\Program Files (x86)\Steam\steamapps\common\Aloft\Aloft_Data\StreamingAssets\amf
-  assetBundles:
-  - assetBundleName: beehive.assetbundle
-    assets:
-    - {fileID: 919132149155446097, guid: 3c86b99658dca2f47a8dbe6ceaf68439, type: 3}
-    - {fileID: 2800000, guid: fe5c435aa1bf36144a7bce89b3c6a3ff, type: 3}
-    - {fileID: 2800000, guid: 15ebc11f90800034b883285df75f2f37, type: 3}
-    - {fileID: 11400000, guid: cbbb522fca6341e469f18f6e33462584, type: 2}
-    - {fileID: 11400000, guid: a767751f4628a0d48a712262a80d3f56, type: 2}
-    - {fileID: 1223252406906318905, guid: dea892f7b38e45444a19e53ac1b62cbb, type: 3}
-    - {fileID: 2800000, guid: c644caab056caec40a92404b2e6e66aa, type: 3}
-    - {fileID: 2800000, guid: 09b1fac4a2bc2584cb5d6228c2e3e2bc, type: 3}
-    - {fileID: 4900000, guid: 9c0c8c362e4a27d489baf818ea0878a7, type: 3}
-    - {fileID: 11400000, guid: 6b60cc3a9586cbd46a8ff79bfa336f0a, type: 2}
+  - <ManifestStagingRoot>
+  includeMetaFiles: 0
+  files:
+  - {fileID: 2800000, guid: 7cd8fc82535fedb4190f88ef429b9dd4, type: 3}
+  - {fileID: 4900000, guid: 21317ab6d937d384c80984fbfcee823a, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,12 +51,14 @@ MonoBehaviour:
   m_Name: BeeBoxes
   m_EditorClassIdentifier: 
   Data:
-  - {fileID: 8308542348391157115}
-  - {fileID: -2856705835112993906}
-  - {fileID: -8289123257145325981}
-  identity: {fileID: 8308542348391157115}
+  - {fileID: -7493092839609442647}
+  - {fileID: 9116203726557091717}
+  - {fileID: 5642057491372185140}
+  - {fileID: 7471749034934986709}
+  - {fileID: -4487639348652281677}
+  identity: {fileID: -7493092839609442647}
   QuickAccess: 1
---- !u!114 &8308542348391157115
+--- !u!114 &5642057491372185140
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,14 +67,55 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f22bb7fd1d3b56a48bc52f8e407901d6, type: 3}
-  m_Name: ManifestIdentity
+  m_Script: {fileID: 11500000, guid: 17d1008b78cb6e846889b7778282fbef, type: 3}
+  m_Name: AssetBundleDefinitions
   m_EditorClassIdentifier: 
-  StagingPaths: []
-  Author: Sessional
-  Name: BeeBoxes
-  Description: A mod to add bee boxes for honey and wax.
-  Version: 1.0
-  Dependencies:
-  - {fileID: 11400000, guid: 0f20a6a408a329540927165479c16c40, type: 2}
-  - {fileID: 11400000, guid: a17693224880ecc43b03781c5e65e4c7, type: 2}
+  StagingPaths:
+  - <ManifestStagingRoot>/plugins
+  - <GamePath>/BepInEx/plugins
+  assetBundles:
+  - assetBundleName: beeboxes.amf.assetbundle
+    assets:
+    - {fileID: 2800000, guid: 10867fd0f871745478ab5b61482e2e80, type: 3}
+    - {fileID: 11400000, guid: 3eb3391bd93418c4283d56fac2f360ff, type: 2}
+    - {fileID: 4900000, guid: d4e4ee986a764244bbeaee71d67d8e3a, type: 3}
+    - {fileID: 919132149155446097, guid: f55530a45775322448e52996e06230f5, type: 3}
+    - {fileID: 11400000, guid: fce8d57fd85bdcd43b1b037e625380c7, type: 2}
+    - {fileID: 2100000, guid: 7740b935441ff634987e24c3f5cdc2a5, type: 2}
+    - {fileID: 11400000, guid: dbb738647373e5140a81d41c3f235d74, type: 2}
+    - {fileID: 1223252406906318905, guid: 1e24fd3012ac1594698e73b8fc52b053, type: 3}
+    - {fileID: 2800000, guid: 796383a752cf21247a93c3b940536ed4, type: 3}
+    - {fileID: 2800000, guid: 1f5db0b24d3bb5640ab6d88a78414ddb, type: 3}
+    - {fileID: 2800000, guid: 2af2567ea69164246afd4458316594c9, type: 3}
+--- !u!114 &7471749034934986709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a82fec78ebc734d9ad1346cd40b5f9, type: 3}
+  m_Name: ThunderstoreData
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>
+  url: http://github.com/sessional/aloftmods
+--- !u!114 &9116203726557091717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7e13dda513544419a89926bd12ad8a, type: 3}
+  m_Name: AssemblyDefinitions
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>/plugins
+  - <GamePath>/BepInEx/plugins
+  definitions:
+  - {fileID: 5897886265953266890, guid: aaf3a4c42bbcd1148a715d2e86159bb0, type: 3}

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98078f34da074e440a0d1c275fbf789e, type: 3}
+  m_Name: NewWorkbenchCraftingRecipe
+  m_EditorClassIdentifier: 
+  inputItems:
+  - item: {fileID: 0}
+    id: 0
+    vanillaItem: 1
+  outputItem:
+    item: {fileID: 0}
+    id: 0
+    vanillaItem: 5002
+  quantity: 1
+  attachToStation: 1
+  craftingStation:
+    station: {fileID: 11400000, guid: 4a34572f9f84ae74bbe28412c1020078, type: 2}
+    vanillaStation: 0
+    id: -1

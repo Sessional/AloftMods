@@ -1,21 +1,19 @@
 # Aloft Mods
 
 This repository houses two primary components and a collection of small examples (that are also fully functioning plugins).
+
 1. **Aloft Mod Framework**: a library built on top of Aloft to facilitate modding of the game.
 2. **Aloft Mod Loader**: an plugin built on top of the Mod Framework that takes care of loading the content from the assetbundle and plugging it into Aloft in the proper way to integrate successfuly.
-3. **Sample projects**: several sample projects that demonstrate how to mod Aloft. There might be variations of three different styles: code-only, content-only, and code&content.
-
-A grouping of random mods to demonstrate how to do things
+3. **Sample projects**: several sample projects that demonstrate how to mod Aloft. There might be variations of three different styles: code-only: a mod using only code; content-only: a mod relying solely on the Aloft Mod Framework to create new content; and a mixture that uses both to add new content and new behaviors.
 
 ## Setting up for development
 
-- Ensure Aloft is imported via Thunderkit
-- Copy in the DLLs from [BepInEx 6.0.0-pre.2](https://github.com/BepInEx/BepInEx/releases/tag/v6.0.0-pre.2) to the Assets folder
-
+- Ensure Aloft is imported via Thunderkit. Ensure `Aloft.dll` is configured to `auto reference`.
+- Copy in the DLLs from [BepInEx 5.4.21](https://thunderstore.io/c/aloft/p/BepInEx/BepInExPack_Aloft/) (5.4.23.2 also works) to the Assets folder. 5 has to be used for support from the patcher to fix serialized types.
 
 ### Running/building the plugins
 
-There is really only one Pipeline (see thunderkit) that is needed for all of the plugins today. Using the quick pickers in the Unity toolbar, select that pipeline and a manifest for the plugin to build and hit the `Execute` button. Note: if a non-standard steam directory is used, it might be necesary to tweak the manifest and the staging directories. DLLs and asset bundles should appear in the Aloft directory under BepInEx/plugins or Aloft_Data/StreamingAssets/amf
+There is really only one Pipeline (see thunderkit) that is needed for all of the plugins today. Using the quick pickers in the Unity toolbar, select that pipeline and a manifest for the plugin to build and hit the `Execute` button. DLLs and asset bundles should appear in the Aloft directory under BepInEx/plugins.
 
 ## Aloft Mod Framework
 
@@ -31,11 +29,19 @@ To make progress on adding new content to Aloft Mod Loader, some tools might be 
 - dnSpy, dotPeek, ILSpy: for digging through the game code to understand how things stack together.
 - AssetRipper: for digging through assets and their settings to understand how things work
 
+## Mod samples in here and what they do:
+- **AdditionalWorkbenchRecipe**: recipe to craft coal at the workbench.
+- **BeeBoxes**: buildable beehive to produce wax and honey.
+- **NewFood**: new cooking ingredient (lobster) and a new edible meal (lobster platter).
+- **NewSpawnableResource**: spawnable rock that drops water opal that spawns naturally on islands
+    (using random biome spawners).
+- **NewTileset**: new building tilesets, along with a new sub-tab inside the building screen to house them.
+- **NewWorkbench**: new workbench and a new set of recipes that it can craft.
+- **NoPoop**: disables droppings of manure from farm animals.
 
-## Mods in here and what they do:
-- **BeeBoxes**: A mod that adds a buildable beehive to produce wax and honey. Relies on the Aloft Mod Framework to work (content and code).
-- **CustomBuildingTileset**: a content-only mod that adds new building tilesets, along with a new sub-tab inside the building screen to house them. Relies on the Aloft Mod Framework to work (content only).
-- **CustomFood**: an example of how to create a new meal, a new recipe and a new food item to eat.
-- **CustomWorkbench**: a code and content mod that adds a new workbench (a mortar) that hooks into the existing crafting system in the game and permits special recipes that aren't craftable on other stations. Relies on the Aloft Mod Framework to work (content and code only).
-- **NoPoop**: A mod that disables droppings of manure (caveat: possibly more things) from farm animals. Code-only plugin, does not rely on the Aloft Mod Framework.
-- **PumpkinCrops**: an example of a content-only mod that adds new spawnable resources in the game and allows them to be harvested for resources. Relies on the Aloft Mod Framework to work (content only).
+## Building a new plugin:
+- [Set up for development](#setting-up-for-development)
+- Create a thunderkit manifest (often easiest to copy a new one). Note: when copying one, the quick access option needs to be toggled for it to appear in the quick access menu.
+- Depend on AloftModFramework
+- Add assembly definitions
+- Add asset bundle definitions. Make sure to name them with the ending `.amf.assetbundle` if you want the AloftModFramework to pick them up and auto load the content correctly.

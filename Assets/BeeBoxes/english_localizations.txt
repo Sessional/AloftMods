@@ -1,0 +1,2 @@
+BEEHIVE	Beehive
+BEEHIVE_DESCRIPTION	A box for farming bees

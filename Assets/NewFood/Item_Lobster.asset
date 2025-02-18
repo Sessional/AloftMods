@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5195a5c356de7498ff7d1252ea2382, type: 3}
+  m_Name: Item_Lobster
+  m_EditorClassIdentifier: 
+  id: 100000
+  itemName: LOBSTER
+  description: LOBSTER_DESCRIPTION
+  sprite: {fileID: 21300000, guid: df606a6d571304c43977f09a35ba6352, type: 3}
+  category:
+    itemCategory: {fileID: 0}
+    vanillaCategory: 3
+    id: 0
+  type:
+    itemType: {fileID: 0}
+    vanillaType: 0
+    id: -1
+  weight:
+    itemWeight: {fileID: 0}
+    vanillaWeight: 0
+    id: -1
+  equipType:
+    equippable: {fileID: 0}
+    vanillaEquippable: 0
+    id: 0
+  pickupAudioTag:
+    audioTag: {fileID: 0}
+    vanillaTag: 0
+    id: 0
+  itemTags: []

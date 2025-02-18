@@ -1,7 +1,7 @@
 ManifestFileVersion: 0
-CRC: 120890775
+CRC: 3709197517
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: pumpkincrops.assetbundle
+      Name: newspawnableresource.amf.assetbundle
       Dependencies: {}
