@@ -22,8 +22,6 @@ namespace AloftModLoader
         private readonly List<AloftModLoaderPopulationData> _populations;
         private readonly Material _interactableSelectableMaterial;
 
-        private bool PopulationDataInitialized = false;
-        
         public EntityLoader(ManualLogSource logger, Harmony harmony, List<Object> assets)
         {
             this._logger = logger;

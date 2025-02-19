@@ -7,3 +7,7 @@ To make progress on adding new content to Aloft Mod Loader, some tools might be 
 - UnityExplorer or RuntimeUnityEditor: for viewing how content works inside the game
 - dnSpy, dotPeek, ILSpy: for digging through the game code to understand how things stack together.
 - AssetRipper: for digging through assets and their settings to understand how things work
+
+
+Is somehow requiring the project in Unity to be hooked up to target a different compatibility level
+via Edit > Project Settings > Player > Other Settings > API Compatibility Level* = .NET Framework.

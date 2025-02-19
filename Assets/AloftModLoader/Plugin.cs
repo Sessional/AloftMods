@@ -6,6 +6,8 @@ using System.Linq;
 using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
+using Level_Manager;
+using Scriptable_Objects.Combat;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -24,6 +26,9 @@ namespace AloftModLoader
         public static EntityLoader EntityLoader;
         public static CookingLoader CookingLoader;
         public static SpawnerLoader SpawnerLoader;
+        public static EquipmentLoader EquipmentLoader;
+
+        public static VanillaGameAssetLocator AssetLocator;
         
         public Plugin()
         {
@@ -60,8 +65,16 @@ namespace AloftModLoader
                     }
                 ).ToList();
 
+            //var assetsBundle = AssetBundle.LoadFromFile(Path.Combine(Application.dataPath, "sharedassets1.assets"));
+            var resources = ScriptableObject.FindObjectsOfType<ScriptableEquipable>();
+            Logger.LogError(resources.Length);
+
+            
             Harmony harmony = new Harmony("AloftModLoader");
 
+            AssetLocator = new VanillaGameAssetLocator(Logger, harmony);
+            AssetLocator.Patch();
+            
             Logger.LogDebug("Loading localizations");
             LocalizationLoader = new LocalizationLoader(Logger, harmony, AllAssets);
             LocalizationLoader.Patch();
@@ -90,6 +103,30 @@ namespace AloftModLoader
             SpawnerLoader = new SpawnerLoader(Logger, harmony, AllAssets);
             SpawnerLoader.Patch();
 
+            EquipmentLoader = new EquipmentLoader(Logger, harmony, AllAssets);
+            EquipmentLoader.Patch();
+
+        }
+
+        public void Awake()
+        {
+            Level.LoadSceneCallBack += LoadSceneCallBack;
+            Logger.LogWarning("Awake!");
+            //var equipables = Level.ConstantManager.ConstantManagers.InventoryManager.Equipables;
+            //Logger.LogDebug("During start found " + equipables.Length + " scriptable equipables.");
+        }
+
+        private void LoadSceneCallBack()
+        {
+            var equipables = Level.ConstantManager.ConstantManagers.InventoryManager.Equipables;
+            Logger.LogDebug("During load scene callback found " + equipables.Length + " scriptable equipables.");
+        }
+
+        public void Start()
+        {
+            Logger.LogWarning("Start!");
+            var equipables = ScriptableObject.FindObjectsOfType<ScriptableEquipable>();
+            Logger.LogDebug("Found " + equipables.Length + " equipables.");
         }
     }
 }
