@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -135447637, guid: 7c729ac68f36db13c9550375d40fce84, type: 3}
+  m_Name: SCombatValues_Pickaxe_New
+  m_EditorClassIdentifier: 
+  ComboTimingPercent: 0.4
+  ChargeTime: 0.5
+  ComboLength: 4
+  LeapDistance: 20
+  UplashHitCount: 3
+  SwooshVfx: 100
+  SwooshVfxFinale: 100
+  DamageCategoryTags:
+  - DamageTags: 102
+    Category: 1
+  - DamageTags: 200
+    Category: 1
+  - DamageTags: 2
+    Category: 2
+  - DamageTags: 15
+    Category: 4
+  - DamageTags: 15
+    Category: 6
+  - DamageTags: 9
+    Category: 6
+  CanRunWhileCharging: 0
+  MovementMultiplierWhileCharging: 0.5
+  DamageDataNormal: {fileID: 11400000, guid: 95c9d2ab2195df34f979d10f5f38a82f, type: 2}
+  DamageDataCharged: {fileID: 11400000, guid: 5eaebc33d67011e45b866d026d6b8e9a, type: 2}
+  DamageDataFinale: {fileID: 11400000, guid: 5f5e82603a71a054e9e7889286523b33, type: 2}
+  DamageDataShove: {fileID: 11400000, guid: a8bc8c70e3c5c8240bbbc661e9cfc049, type: 2}

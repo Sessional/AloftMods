@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e2287d7d8b09c94195451504081e1d7, type: 3}
+  m_Name: Equippable_Pickaxe_New
+  m_EditorClassIdentifier: 
+  id: 100000
+  item:
+    item: {fileID: 11400000, guid: c0a7f1ee7f456bb4bb763470aa99b844, type: 2}
+    id: 0
+    vanillaItem: 0
+  heldItemPrefab: {fileID: 1130412320938927, guid: 32ec27fd73fb49248b36ae41035e5b19, type: 3}
+  handBehaviour: 1
+  combatValues: {fileID: 11400000, guid: 2e0306980a528d946b2b65b8098f5e51, type: 2}
+  bowValues: {fileID: 0}
+  equippableTemplate:
+    template: {fileID: 0}
+    vanillaTemplate: 1
