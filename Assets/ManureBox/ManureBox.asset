@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7493092839609442647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22bb7fd1d3b56a48bc52f8e407901d6, type: 3}
+  m_Name: ManifestIdentity
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>
+  Author: AloftModFramework
+  Name: ManureBox
+  Description: A box that automatically collects manure
+  Version: 0.1.3
+  Dependencies:
+  - {fileID: 11400000, guid: c829f821ded204849b4769cb2747945d, type: 2}
+--- !u!114 &-4487639348652281677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b243ff405b33b94dbf5b6775dd9aa33, type: 3}
+  m_Name: Files
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>
+  includeMetaFiles: 0
+  files:
+  - {fileID: 2800000, guid: 525aaed329d783748b1b3bad6afd5480, type: 3}
+  - {fileID: 4900000, guid: c9ca8d9af96f16d45a4ebeb2263d2dea, type: 3}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e563561e08b6a3642a487177f5cfbb37, type: 3}
+  m_Name: ManureBox
+  m_EditorClassIdentifier: 
+  Data:
+  - {fileID: -7493092839609442647}
+  - {fileID: 9116203726557091717}
+  - {fileID: 5642057491372185140}
+  - {fileID: 7471749034934986709}
+  - {fileID: -4487639348652281677}
+  identity: {fileID: -7493092839609442647}
+  QuickAccess: 1
+--- !u!114 &5642057491372185140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d1008b78cb6e846889b7778282fbef, type: 3}
+  m_Name: AssetBundleDefinitions
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>/plugins
+  - <GamePath>/BepInEx/plugins
+  assetBundles:
+  - assetBundleName: manureboxes.amf.assetbundle
+    assets:
+    - {fileID: 11400000, guid: f772f56e3ec820b48b5ffaf982a3c520, type: 2}
+    - {fileID: 2800000, guid: a387436d938631d49a2f6796737f9c89, type: 3}
+    - {fileID: 2800000, guid: 7c3b7717ad866334581b799680cbbdcf, type: 3}
+    - {fileID: 2800000, guid: f8a3eea6ef34f804abde1d6db7732b8d, type: 3}
+    - {fileID: 2800000, guid: ec820cbdb10911c448b88ebc96f38f23, type: 3}
+    - {fileID: 919132149155446097, guid: c41dc405c9932f94b861ba0aca975dfc, type: 3}
+    - {fileID: 919132149155446097, guid: f37fcedd2ed4b3347a6148281c86c277, type: 3}
+    - {fileID: 919132149155446097, guid: 90c5a8590acfbee4d97c7605cce781f0, type: 3}
+    - {fileID: 919132149155446097, guid: 5b3ddf6b9e542164d81f362122ef06d9, type: 3}
+    - {fileID: 2100000, guid: dd4df064c1597aa49ae24c331211eae9, type: 2}
+    - {fileID: 2100000, guid: d1a36518cb575964e8184feab12ec28e, type: 2}
+    - {fileID: 11400000, guid: d6796cc6ae915fc40b5c44f664a9fe32, type: 2}
+    - {fileID: 4630330037469667711, guid: 41c5433221c0806488023062bb1c33ac, type: 3}
+    - {fileID: 2800000, guid: 3327e21d4cdaf194d8c5dd2ca6b842e5, type: 3}
+    - {fileID: 11400000, guid: a87d83e405364974b8db5baef2f3305c, type: 2}
+--- !u!114 &7471749034934986709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a82fec78ebc734d9ad1346cd40b5f9, type: 3}
+  m_Name: ThunderstoreData
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>
+  url: http://github.com/sessional/aloftmods
+--- !u!114 &9116203726557091717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7e13dda513544419a89926bd12ad8a, type: 3}
+  m_Name: AssemblyDefinitions
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestStagingRoot>/plugins
+  - <GamePath>/BepInEx/plugins
+  definitions:
+  - {fileID: 5897886265953266890, guid: 4c7389a1a69126f4ba6a66aacd8689c5, type: 3}

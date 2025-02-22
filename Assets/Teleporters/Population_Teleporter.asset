@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847ba03dc1d61714e995c4b7d20fd944, type: 3}
+  m_Name: Population_Teleporter
+  m_EditorClassIdentifier: 
+  id: 400009
+  prefab: {fileID: 4416833790325954593, guid: 276e0b2f80c4977469f356eff0519b24, type: 3}
+  behaviorType:
+    vanillaBehaviorType: 0
+  multistepBehavior:
+    vanillaBehavior: 0
+  loadDistance: 2
+  dataTags:
+  - vanillaTag: 7
+  learnedFromSketching: 1
+  learnedBlueprint: {fileID: 11400000, guid: e82578d40999afe42b66fef0cf380f78, type: 2}

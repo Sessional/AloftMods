@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ff503dec5425a45aeb8e09d2c006eb, type: 3}
+  m_Name: ConstructionBlueprint_ManureBox
+  m_EditorClassIdentifier: 
+  displayName: MANURE_BOX
+  description: MANURE_BOX_DESCRIPTION
+  sprite: {fileID: 21300000, guid: 3327e21d4cdaf194d8c5dd2ca6b842e5, type: 3}
+  populationData:
+    population: {fileID: 11400000, guid: d6796cc6ae915fc40b5c44f664a9fe32, type: 2}
+    vanillaPopulation: 0
+    id: 0
+  hideInBuildMenu: 0
+  category:
+    category: {fileID: 0}
+    vanillaCategory: 14
+    id: -1
+  defaultScale: 1
+  craftingCost:
+  - item: {fileID: 0}
+    id: 0
+    vanillaItem: 3
+    quantity: 1
+  hammerCost: []
+  isVariantOf:
+    population: {fileID: 0}
+    vanillaPopulation: 0
+    id: 0
+  variants: []
+  unlockedPopulations: []
+  audioType:
+    material: {fileID: 0}
+    vanillaMaterial: 0
+    id: -1

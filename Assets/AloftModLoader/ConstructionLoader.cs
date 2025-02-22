@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using AloftModFramework.Construction;
 using BepInEx.Logging;
 using Crafting.Construction.EZSnap;
@@ -11,6 +13,7 @@ using UI.Building;
 using UnityEngine;
 using Utilities;
 using Logger = UnityEngine.Logger;
+using Object = UnityEngine.Object;
 
 namespace AloftModLoader
 {
@@ -89,6 +92,8 @@ namespace AloftModLoader
 
                     var popData = Plugin.EntityLoader.GetDataForId(x.populationData.GetPopulationId());
                     blueprint.PopData = popData;
+                    // Variants require this link back to their blueprint.
+                    popData.ScriptableCrafting = blueprint;
 
                     // Because population data has a reference to the `ScriptableCrafting` object
                     // (the blueprint) that is abstracted away from the framework, the attaching
@@ -156,6 +161,11 @@ namespace AloftModLoader
                 new HarmonyMethod(AccessTools.Method(typeof(ConstructionLoader),
                     nameof(ConstructionLoader.GetSnapData)))
             );
+
+            _harmony.Patch(
+                AccessTools.Method(typeof(UI_Building_InfoWindow), nameof(UI_Building_InfoWindow.DisplayVariant)),
+                new HarmonyMethod(AccessTools.Method(typeof(ConstructionLoader), nameof(ConstructionLoader.DisplayVariant)))
+                );
         }
 
         public static void Tabs_Initialize(UI_BuildingMenu __instance)
@@ -230,6 +240,23 @@ namespace AloftModLoader
             }
 
             return __result;
+        }
+
+        public static void DisplayVariant(UI_Building_InfoWindow __instance)
+        {
+            Console.WriteLine("Instance is: " + __instance);
+            var field = AccessTools.Field(typeof(UI_Building_InfoWindow), "_variantPopIDs");
+            var value = field.GetValue(__instance) as List<PopulationID.ID>;
+            Console.WriteLine("Found X variants: " + value.Count);
+            Console.WriteLine("Variants are: " + string.Join(",", value));
+            
+            foreach (var variant in value)
+            {
+                var popData = Level.TerrainManager.PopulationManager.GetPopulationData(variant);
+                Console.WriteLine(popData);
+                Console.WriteLine("Recipe: " + popData.ScriptableCrafting);
+                
+            }
         }
     }
 }
