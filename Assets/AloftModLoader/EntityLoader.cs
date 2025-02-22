@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using System.Reflection.Emit;
 using AloftModFramework.Entities;
 using BepInEx.Logging;
 using HarmonyLib;
@@ -52,6 +54,7 @@ namespace AloftModLoader
                             var mainTex = renderer.material.GetTexture("_MainTex");
                             var normalTex = renderer.material.GetTexture("_BumpMap");
                             var detailMask = renderer.material.GetTexture("_DetailMask");
+                            var color = renderer.material.GetColor("_Color");
 
                             var newMaterial = new Material(_interactableSelectableMaterial);
                             newMaterial.name = "AloftModLoader_InteractableSelectable_Material";
@@ -61,7 +64,7 @@ namespace AloftModLoader
                             newMaterial.SetTexture("_TextureNormals", normalTex);
                             newMaterial.SetTexture("_TextureMask", detailMask);
                             newMaterial.SetVector("_ColorSelect", new Vector4(1.6f, 1.3f, 0.5f, 1));
-                            newMaterial.SetColor("_Color", new Color(1f, 1f, 1f, 1f));
+                            newMaterial.SetColor("_Color", color);
 
                             renderer.material = newMaterial;
                         });
@@ -95,6 +98,14 @@ namespace AloftModLoader
                 null,
                 new HarmonyMethod(AccessTools.Method(typeof(EntityLoader), nameof(EntityLoader.GetPopulationDataFromPopulationManager)))
             );
+            
+            this._harmony.Patch(
+                AccessTools.Method(typeof(PopulationManager), nameof(PopulationManager.GetPopulationData)),
+                null,
+                null,
+                new HarmonyMethod(AccessTools.Method(typeof(EntityLoader), nameof(EntityLoader.MuteException)))
+            );
+
 
             this._harmony.Patch(
                 AccessTools.Method(typeof(ScriptablePopulationDataManager),
@@ -117,11 +128,32 @@ namespace AloftModLoader
             );
         }
 
-        public static ScriptablePopulationData GetPopulationDataFromPopulationManager(ScriptablePopulationData __result,
+        public static IEnumerable<CodeInstruction> MuteException(IEnumerable<CodeInstruction> instructions,
+            ILGenerator il)
+        {
+            var writeLineMethod = new Action<object>(Console.WriteLine);
+            var writeLineMethodInfo = writeLineMethod.GetMethodInfo();
+            
+            var newInstructions = new List<CodeInstruction>(instructions);
+            var nopIndex = newInstructions.FindIndex(x =>
+                x.opcode == OpCodes.Call && ((MethodInfo)x.operand) == writeLineMethodInfo);
+            
+            if (nopIndex != -1)
+            {
+                var originalOp = newInstructions[nopIndex];
+                newInstructions[nopIndex] = new CodeInstruction(OpCodes.Ret);
+                newInstructions[nopIndex].labels = originalOp.labels;
+                newInstructions[nopIndex].blocks = originalOp.blocks;
+            }
+            
+            if (Plugin.configLogDebugILPatches.Value) Plugin.EntityLoader._logger.LogDebug("New code: " + string.Join("\n", newInstructions));
+            return newInstructions;
+        }
+        
+        public static ScriptablePopulationData GetPopulationDataFromPopulationManager(ScriptablePopulationData __result, PopulationManager __instance,
             PopulationID.ID populationID)
         {
-            // stomp, looks like the other one always returns something? WaterL
-            if (Plugin.EntityLoader._populations != null && Plugin.EntityLoader._populations.Count > 0)
+            if (__result == null)
             {
                 var entity = Plugin.EntityLoader._populations.FirstOrDefault(x => x.PopulationID == populationID);
                 if (entity != null)
@@ -129,6 +161,10 @@ namespace AloftModLoader
                     Plugin.EntityLoader._logger.LogDebug("Found population data for " + entity.PopulationID);
                     return entity;
                 }
+            
+                // This was the default before we patched the ret null instead of logging.
+                Plugin.EntityLoader._logger.LogError("Unable to find an entity with entity id: " + populationID);
+                return __instance.PopulationDataManager.AllPopulationData[0];
             }
 
             return __result;
@@ -136,7 +172,16 @@ namespace AloftModLoader
         
         public static ScriptablePopulationData GetPopulationDataFromPopulationDataManager(ScriptablePopulationData __result, PopulationID.ID popID)
         {
-            return GetPopulationDataFromPopulationManager(__result, popID);
+            if (__result == null)
+            {
+                var entity = Plugin.EntityLoader._populations.FirstOrDefault(x => x.PopulationID == popID);
+                if (entity != null)
+                {
+                    Plugin.EntityLoader._logger.LogDebug("Found population data for " + entity.PopulationID);
+                    return entity;
+                }
+            }
+            return __result;
         }
 
         public static void Initialize(PopulationManager __instance)

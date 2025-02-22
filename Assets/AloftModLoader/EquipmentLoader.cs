@@ -49,6 +49,16 @@ namespace AloftModLoader
                     equippable.HandBehaviour = x.handBehaviour;
 
                     equippable.equipableTemplate = x.equippableTemplate;
+                    if (x.equippableTemplate.template != null)
+                    {
+                        // These fields can ONLY be set if they came from a reference with a link to
+                        // the values. If they are intended to be `vanilla` values, they can't be loaded
+                        // here because they do not yet exist. See Plugin.LoadSceneCallback for a possible
+                        // hook point to finalize these objects.
+                        equippable.OverrideAnimations = x.equippableTemplate.template.overrideAnimations;
+                        equippable.ThirdPersonAnimations = x.equippableTemplate.template.thirdPersonAnimations;
+                    }
+                    
                     equippable.prefab = x.heldItemPrefab;
                     equippable.prefab.GetComponentsInChildren<MeshRenderer>()
                         .ForEach(renderer =>
@@ -71,10 +81,6 @@ namespace AloftModLoader
 
                             renderer.material = newMaterial;
                         });
-                        
-                    // TODO: ingest/populate the animation settings here.
-                    //equipable.OverrideAnimations = ;
-                    //equiable.ThirdPersonAnimations = ;
                     
                     // todo: grab from asset
                     equippable.HoldInLeftHand = false;
@@ -120,8 +126,8 @@ namespace AloftModLoader
         public static IEnumerable<CodeInstruction> SpawnItemInHand(IEnumerable<CodeInstruction> instructions, ILGenerator il)
         {
             FieldInfo pathToolField = AccessTools.Field(typeof(ScriptableEquipable), nameof(ScriptableEquipable.PathTool));
-            FieldInfo prefabToolField = AccessTools.Field(typeof(AloftModLoaderEquipable), nameof(AloftModLoaderEquipable.prefab));
-            MethodInfo instantiateMethod = AccessTools.Method(typeof(GameObject), nameof(GameObject.Instantiate), parameters: new []{typeof(GameObject), typeof(Transform)});
+            MethodInfo instantiateItem = AccessTools.Method(typeof(EquipmentLoader),
+                nameof(EquipmentLoader.SpawnHeldItem));
             
             var code = new List<CodeInstruction>(instructions);
 
@@ -153,19 +159,13 @@ namespace AloftModLoader
             }
             
             var newInstructions = new List<CodeInstruction>() {
-                new(OpCodes.Ldarg_1),
+                new(OpCodes.Ldarg_0),
                 new(OpCodes.Ldfld, pathToolField),
                 new(OpCodes.Brtrue, beforeLoadLogic),
-                // todo: we can do more smart things...
-                //  like bailing out if it isn't an instance...
                 new(OpCodes.Ldarg_0),
-                new(OpCodes.Castclass, typeof(AloftModLoaderEquipable)),
-                new(OpCodes.Ldfld, prefabToolField),
-                //new(OpCodes.Ldloc_0),
-                // todo: figure out how to keep left/right hand selection...
-                // another branch, some more pops? How can I branch & label on top of this branch in the new instructions?
+                new(OpCodes.Ldarg_1),
                 new(OpCodes.Ldarg_2),
-                new(OpCodes.Call, instantiateMethod),
+                new(OpCodes.Call, instantiateItem),
                 new(OpCodes.Br_S, afterLoadLogic)
             };
 
@@ -174,20 +174,29 @@ namespace AloftModLoader
                 code.InsertRange(insertIndex, newInstructions);
             }
             
-            Plugin.EquipmentLoader._logger.LogDebug("New code: " + string.Join("\n", newInstructions));
+            if (Plugin.configLogDebugILPatches.Value) Plugin.EquipmentLoader._logger.LogDebug("New code: " + string.Join("\n", newInstructions));
 
             return code;
+        }
+
+        public static GameObject SpawnHeldItem(ScriptableEquipable equipable, Transform parentLeft, Transform parentRight)
+        {
+            var modEquipable = equipable as AloftModLoaderEquipable;
+            if (modEquipable is null) return null;
+
+            var transform = equipable.HoldInLeftHand ? parentLeft : parentRight;
+
+            return Object.Instantiate<GameObject>(modEquipable.prefab, transform);
         }
         
         public static IEnumerable<CodeInstruction> Init(IEnumerable<CodeInstruction> instructions, ILGenerator il)
         {
             var code = new List<CodeInstruction>(instructions);
             FieldInfo pathToolField = AccessTools.Field(typeof(ScriptableEquipable), nameof(ScriptableEquipable.PathTool));
-            FieldInfo prefabToolField =
-                AccessTools.Field(typeof(AloftModLoaderEquipable), nameof(AloftModLoaderEquipable.prefab));
-            // todo: ideally we'd have successfully hooked with this instead of string matching...
-            // but it can't seem to find the generic overload here?
-            //MethodInfo resourceLoad = AccessTools.Method(typeof(GameObject), nameof(Resources.Load)); //, parameters: new []{ typeof(string)}
+            MethodInfo instantiateFromPrefab =
+                AccessTools.Method(typeof(EquipmentLoader), nameof(EquipmentLoader.InstantiateFromPrefab));
+            var resourcesLoadFunc = new Func<String, GameObject>(Resources.Load<GameObject>);
+            var resourcesLoadMethodInfo = resourcesLoadFunc.GetMethodInfo().GetGenericMethodDefinition().MakeGenericMethod(typeof(GameObject));
             
             int insertIndex = -1;
             var rightAfterLoad = il.DefineLabel();
@@ -199,6 +208,7 @@ namespace AloftModLoader
             {
                 if (code[i].LoadsField(pathToolField) && !foundFirstPathLoad)
                 {
+                    foundFirstPathLoad = true;
                     // the previous call here is ldarg.1,
                     // after the null check, return to that instruction
                     insertIndex = i - 1;
@@ -209,9 +219,7 @@ namespace AloftModLoader
                 if (opCode == OpCodes.Call)
                 {
                     var methodCalled = ((MethodInfo)code[i].operand);
-                    Console.WriteLine("operand is" + methodCalled.ToString());
-
-                    if (methodCalled.ToString().Contains("Load[GameObject]") && !foundFirstResourceLoad)
+                    if (methodCalled == resourcesLoadMethodInfo && !foundFirstResourceLoad)
                     {
                         foundFirstResourceLoad = true;
                         code[i + 1].labels.Add(rightAfterLoad);
@@ -223,11 +231,8 @@ namespace AloftModLoader
                 new(OpCodes.Ldarg_1),
                 new(OpCodes.Ldfld, pathToolField),
                 new(OpCodes.Brtrue, defaultPathToolInstantiation),
-                // todo: we can do more smart things...
-                //  like bailing out if it isn't an instance...
                 new(OpCodes.Ldarg_1),
-                new(OpCodes.Castclass, typeof(AloftModLoaderEquipable)),
-                new(OpCodes.Ldfld, prefabToolField),
+                new(OpCodes.Call, instantiateFromPrefab),
                 new(OpCodes.Br_S, rightAfterLoad)
             };
             
@@ -236,9 +241,17 @@ namespace AloftModLoader
                 code.InsertRange(insertIndex, newInstructions);
             }
             
-            Plugin.EquipmentLoader._logger.LogDebug("New code: " + string.Join("\n", newInstructions));
+            if (Plugin.configLogDebugILPatches.Value) Plugin.EquipmentLoader._logger.LogDebug("New code: " + string.Join("\n", newInstructions));
 
             return code;
+        }
+
+        public static GameObject InstantiateFromPrefab(ScriptableEquipable equipable)
+        {
+            var modEquipable = equipable as AloftModLoaderEquipable;
+            if (modEquipable is null) return null;
+            
+            return modEquipable.prefab;
         }
         
         public static ScriptableEquipable GetEquipable(ScriptableEquipable __result, PlayerEquip.Equipable equip)

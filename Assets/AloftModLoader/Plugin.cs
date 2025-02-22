@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using BepInEx;
+using BepInEx.Configuration;
 using BepInEx.Logging;
 using HarmonyLib;
 using Level_Manager;
@@ -30,21 +32,21 @@ namespace AloftModLoader
 
         public static VanillaGameAssetLocator AssetLocator;
         
+        public static ConfigEntry<bool> configLogDebugILPatches;
+
         public Plugin()
         {
+            configLogDebugILPatches = Config.Bind("Logging", "LogILPatchInstructions", false,
+                "Log (at debug) the IL Patch instructions after the patch has been applied.");
+            
             Logger.LogDebug("Info location: " + Info.Location);
-            var modDirectory = Path.GetDirectoryName(Info.Location);
-            string pluginDirectory;
+            string pluginDirectory = Path.GetDirectoryName(Info.Location);
             // Developing locally does not insert Author-Name paths into the staging
             // directory, but when installed via R2ModMan they do show up. If running
             // without `plugins` at the end, go up one extra level, otherwise stay put.
-            if (modDirectory.EndsWith("plugins"))
+            if (!pluginDirectory.EndsWith("plugins"))
             {
-                pluginDirectory = Path.Combine(Path.GetDirectoryName(Info.Location));                
-            }
-            else
-            {
-                pluginDirectory = Path.Combine(Path.GetDirectoryName(Info.Location), "..");
+                pluginDirectory = Path.Combine(pluginDirectory, "..");
             }
             var bundleNames = Directory.GetFiles(pluginDirectory, "*.amf.assetbundle", SearchOption.AllDirectories);
             Logger.LogDebug("Found bundles: " + string.Join(",", bundleNames));
@@ -64,11 +66,6 @@ namespace AloftModLoader
                         DontDestroyOnLoad(x);
                     }
                 ).ToList();
-
-            //var assetsBundle = AssetBundle.LoadFromFile(Path.Combine(Application.dataPath, "sharedassets1.assets"));
-            var resources = ScriptableObject.FindObjectsOfType<ScriptableEquipable>();
-            Logger.LogError(resources.Length);
-
             
             Harmony harmony = new Harmony("AloftModLoader");
 
@@ -112,21 +109,12 @@ namespace AloftModLoader
         {
             Level.LoadSceneCallBack += LoadSceneCallBack;
             Logger.LogWarning("Awake!");
-            //var equipables = Level.ConstantManager.ConstantManagers.InventoryManager.Equipables;
-            //Logger.LogDebug("During start found " + equipables.Length + " scriptable equipables.");
         }
 
         private void LoadSceneCallBack()
         {
             var equipables = Level.ConstantManager.ConstantManagers.InventoryManager.Equipables;
             Logger.LogDebug("During load scene callback found " + equipables.Length + " scriptable equipables.");
-        }
-
-        public void Start()
-        {
-            Logger.LogWarning("Start!");
-            var equipables = ScriptableObject.FindObjectsOfType<ScriptableEquipable>();
-            Logger.LogDebug("Found " + equipables.Length + " equipables.");
         }
     }
 }

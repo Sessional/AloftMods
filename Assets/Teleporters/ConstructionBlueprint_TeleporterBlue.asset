@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ff503dec5425a45aeb8e09d2c006eb, type: 3}
+  m_Name: ConstructionBlueprint_TeleporterBlue
+  m_EditorClassIdentifier: 
+  displayName: TELEPORTER_BLUE
+  description: TELEPORTER_DESCRIPTION_BLUE
+  sprite: {fileID: 21300000, guid: 823e6f828c721fb44ab39efc1487c9ea, type: 3}
+  populationData:
+    population: {fileID: 11400000, guid: 39e134891ba8e9849b2a77d9aa102600, type: 2}
+    vanillaPopulation: 0
+    id: 0
+  hideInBuildMenu: 0
+  category:
+    category: {fileID: 0}
+    vanillaCategory: 19
+    id: -1
+  defaultScale: 1
+  craftingCost:
+  - item: {fileID: 0}
+    id: 0
+    vanillaItem: 3
+    quantity: 1
+  hammerCost: []
+  isVariantOf:
+    population: {fileID: 11400000, guid: 97cea7fc5a2f8a246b9b1e5e18af1de7, type: 2}
+    vanillaPopulation: 0
+    id: 0
+  variants: []
+  unlockedPopulations: []
+  audioType:
+    material: {fileID: 0}
+    vanillaMaterial: 0
+    id: -1
